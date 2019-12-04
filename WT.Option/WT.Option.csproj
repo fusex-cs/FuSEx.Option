@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <PackageId>WT.Option</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>William Taylor</Authors>
     <Company>William Taylor</Company>
     <Title>WT.Option</Title>

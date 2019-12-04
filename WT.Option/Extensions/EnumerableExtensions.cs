@@ -15,6 +15,12 @@ namespace WT.Option.Extensions
             this IEnumerable<T> sequence, Func<T, bool> predicate) =>
             sequence.Where(predicate).FirstOrNone();
 
+        public static IEnumerable<T> SelectOptional<T>(
+            this IEnumerable<Option<T>> sequence) =>
+            sequence
+                .OfType<Some<T>>()
+                .Select(s => s.Content);
+
         public static IEnumerable<TResult> SelectOptional<T, TResult>(
             this IEnumerable<T> sequence, Func<T, Option<TResult>> map) =>
             sequence.Select(map)

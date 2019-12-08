@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   build:
@@ -17,3 +19,16 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build FuSEx.Option/FuSEx.Option.csproj --configuration Release
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Pack nuget package
+        run: dotnet pack FuSEx.Option/FuSEx.Option.csproj --configuration Release
+
+      - name: Push nuget package
+        run: dotnet nuget push **/*.nupkg -p:PackageVersion=
+          --api-key ${{ secrets.Nuget_Deploy_Key }} 
+          --source https://api.nuget.org/v3/index.json

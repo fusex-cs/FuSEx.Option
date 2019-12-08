@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WT.Option
+namespace FuSEx.Option
 {
     public abstract class Option<T>
     {

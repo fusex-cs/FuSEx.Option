@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WT.Option
+namespace FuSEx.Option
 {
     public sealed class Some<T> : Option<T>, IEquatable<Some<T>>
     {
@@ -12,29 +12,21 @@ namespace WT.Option
             this.Content = value;
         }
 
-        public static implicit operator T(Some<T> some) =>
-            some.Content;
+        public static implicit operator T(Some<T> some) => some.Content;
 
-        public static implicit operator Some<T>(T value) =>
-            new Some<T>(value);
+        public static implicit operator Some<T>(T value) => new Some<T>(value);
 
-        public override Option<TResult> Map<TResult>(Func<T, TResult> map) =>
-            map(this.Content);
+        public override Option<TResult> Map<TResult>(Func<T, TResult> map) => map(this.Content);
 
-        public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) =>
-            map(this.Content);
+        public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) => map(this.Content);
 
-        public override T Reduce(T whenNone) =>
-            this.Content;
+        public override T Reduce(T whenNone) => this.Content;
 
-        public override T Reduce(Func<T> whenNone) =>
-            this.Content;
+        public override T Reduce(Func<T> whenNone) => this.Content;
 
-        public override string ToString() =>
-            $"Some({this.ContentToString})";
+        public override string ToString() => $"Some({this.ContentToString})";
 
-        private string ContentToString =>
-            this.Content?.ToString() ?? "<null>";
+        private string ContentToString => this.Content?.ToString() ?? "<null>";
 
         public bool Equals(Some<T> other)
         {
@@ -50,10 +42,7 @@ namespace WT.Option
             return obj is Some<T> && Equals((Some<T>) obj);
         }
 
-        public override int GetHashCode()
-        {
-            return EqualityComparer<T>.Default.GetHashCode(Content);
-        }
+        public override int GetHashCode() => EqualityComparer<T>.Default.GetHashCode(Content);
 
         public static bool operator ==(Some<T> a, Some<T> b) =>
             (a is null && b is null) ||

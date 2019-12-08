@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>FuSEx.Option</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>William Taylor</Authors>
+    <Company>FuSEx</Company>
+    <Title>FuSEx.Option</Title>
+    <PackageDescription>A Functional System Extension to provide an implementation of the Option/Maybe type in C#</PackageDescription>
+  </PropertyGroup>
+
+</Project>

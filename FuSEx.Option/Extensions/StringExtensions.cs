@@ -1,6 +1,6 @@
 using WT.Option;
 
-namespace WT.Option.Extensions
+namespace FuSEx.Option.Extensions
 {
     public static class StringExtensions 
     {

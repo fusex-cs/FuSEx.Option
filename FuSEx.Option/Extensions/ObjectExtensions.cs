@@ -1,6 +1,6 @@
 using System;
 
-namespace WT.Option.Extensions
+namespace FuSEx.Option.Extensions
 {
     public static class ObjectExtensions
     {

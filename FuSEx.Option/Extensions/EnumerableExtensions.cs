@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WT.Option.Extensions
+namespace FuSEx.Option.Extensions
 {
     public static class EnumerableExtensions
     {

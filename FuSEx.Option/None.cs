@@ -1,20 +1,16 @@
 using System;
 
-namespace WT.Option
+namespace FuSEx.Option
 {
     public sealed class None<T> : Option<T>, IEquatable<None<T>>, IEquatable<None>
     {
-        public override Option<TResult> Map<TResult>(Func<T, TResult> map) =>
-            None.Value;
+        public override Option<TResult> Map<TResult>(Func<T, TResult> map) => None.Value;
 
-        public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) =>
-            None.Value;
+        public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) => None.Value;
 
-        public override T Reduce(T whenNone) =>
-            whenNone;
+        public override T Reduce(T whenNone) => whenNone;
 
-        public override T Reduce(Func<T> whenNone) =>
-            whenNone();
+        public override T Reduce(Func<T> whenNone) => whenNone();
 
         public override bool Equals(object obj) =>
             !(obj is null) && ((obj is None<T>) || (obj is None));

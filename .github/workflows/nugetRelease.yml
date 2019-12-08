@@ -23,8 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - name: Pack nuget package
-        run: dotnet pack FuSEx.Option/FuSEx.Option.csproj --configuration Release -p:PackageVersion=${{ github.ref }}
+        run: dotnet pack FuSEx.Option/FuSEx.Option.csproj --configuration Release -p:PackageVersion=$(git describe)
 
       - name: Push nuget package
         run: dotnet nuget push **/*.nupkg

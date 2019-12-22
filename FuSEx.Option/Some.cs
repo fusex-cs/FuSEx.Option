@@ -39,7 +39,7 @@ namespace FuSEx.Option
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj is Some<T> && Equals((Some<T>) obj);
+            return obj is Some<T> other && Equals(other);
         }
 
         public override int GetHashCode() => EqualityComparer<T>.Default.GetHashCode(Content);

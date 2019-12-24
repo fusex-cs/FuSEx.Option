@@ -19,5 +19,11 @@ namespace FuSEx.Option.Unit.Tests
             Option<bool> none = None.Value;
             none.Map(o => !o).Should().Be(None.Value);
         }
+
+        [Fact]
+        public void FailTest()
+        {
+            false.Should().BeTrue();
+        }
     }
 }

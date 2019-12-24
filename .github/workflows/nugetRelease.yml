@@ -24,6 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Run Unit Tests
+        run: dotnet test FuSEx.Option.Unit.Tests/FuSEx.Option.Unit.Tests.csproj
+
       - name: Pack nuget package
         run: dotnet pack FuSEx.Option/FuSEx.Option.csproj --configuration Release -p:PackageVersion=$(git describe)
 

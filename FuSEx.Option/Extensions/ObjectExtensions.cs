@@ -12,5 +12,7 @@ namespace FuSEx.Option.Extensions
 
         public static Option<T> NoneIfNull<T>(this T obj) =>
             obj.When(!object.ReferenceEquals(obj, null));
+
+        public static Option<T> ToOption<T>(this T obj) => NoneIfNull(obj);
     }
 }

@@ -1,6 +1,5 @@
 using Xunit;
 using FluentAssertions;
-using FuSEx.Option;
 using FuSEx.Option.Extensions;
 
 namespace FuSEx.Option.Unit.Tests
@@ -16,8 +15,7 @@ namespace FuSEx.Option.Unit.Tests
         [Fact]
         public void MapShouldTransformNoneToNone()
         {
-            Option<bool> none = None.Value;
-            none.Map(o => !o).Should().Be(None.Value);
+            ((Option<bool>)None.Value).Map(o => !o).Should().Be(None.Value);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace FuSEx.Option.Extensions
         /// Gets the first item in a sequence wrapped in an Option
         /// </summary>
         /// <returns>
-        /// <c>Some</c> with the first item of the sequence if the sequence has at least one item in it.
+        /// <c>Some</c> with the first item of the sequence if the sequence has at least one item in it. <br/>
         /// <c>None</c> if the sequence is empty.
         /// </returns>
         public static Option<T> FirstOrNone<T>(this IEnumerable<T> sequence) =>
@@ -23,7 +23,7 @@ namespace FuSEx.Option.Extensions
         /// </summary>
         /// <param name="predicate">The predicate to filter the list with.</param>
         /// <returns>
-        /// <c>Some</c> with the first item of the sequence if the sequence has at least one item in it that matches the predicate.
+        /// <c>Some</c> with the first item of the sequence if the sequence has at least one item in it that matches the predicate. <br/>
         /// <c>None</c> if no items in the sequence match the predicate.
         /// </returns>
         public static Option<T> FirstOrNone<T>(
@@ -35,7 +35,7 @@ namespace FuSEx.Option.Extensions
         /// Gets the last item in a sequence wrapped in an Option
         /// </summary>
         /// <returns>
-        /// <c>Some</c> with the last item of the sequence if the sequence has at least one item in it.
+        /// <c>Some</c> with the last item of the sequence if the sequence has at least one item in it. <br/>
         /// <c>None</c> if the sequence is empty.
         /// </returns>
         public static Option<T> LastOrNone<T>(this IEnumerable<T> sequence) =>
@@ -48,7 +48,7 @@ namespace FuSEx.Option.Extensions
         /// </summary>
         /// <param name="predicate">The predicate to filter the list with.</param>
         /// <returns>
-        /// <c>Some</c> with the last item of the sequence if the sequence has at least one item in it that matches the predicate.
+        /// <c>Some</c> with the last item of the sequence if the sequence has at least one item in it that matches the predicate. <br/>
         /// <c>None</c> if no items in the sequence match the predicate.
         /// </returns>
         public static Option<T> LastOrNone<T>(

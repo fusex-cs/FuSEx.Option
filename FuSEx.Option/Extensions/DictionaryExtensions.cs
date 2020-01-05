@@ -9,7 +9,7 @@ namespace FuSEx.Option.Extensions
         /// </summary>
         /// <param name="key">The key to search the dictionary for.</param>
         /// <returns>
-        /// <c>Some</c> with the value if the value exists.
+        /// <c>Some</c> with the value if the value exists. 
         /// <c>None</c> if the value does not exist.
         /// </returns>
         public static Option<TValue> TryGetValue<TKey, TValue>(

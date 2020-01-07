@@ -1,7 +1,7 @@
 # FuSEx.Option
 
 [![NuGet](https://img.shields.io/nuget/v/FuSEx.Option.svg?style=flat)](https://www.nuget.org/packages/FuSEx.Option)
-[![license](https://img.shields.io/github/license/fusex-cs/Option.svg?style=flat)](https://github.com/fusex-cs/Option/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/fusex-cs/Option.svg?style=flat)](https://github.com/fusex-cs/Option/blob/master/LICENSE.txt)
 
 ## A simple generic type to wrap and encapsulate a function that may or may not return a value
 
